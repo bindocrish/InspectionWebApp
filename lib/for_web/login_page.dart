@@ -31,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
     try {
       final response = await LoginService.loginPostMethod(body);
       loginDetails = response;
+      print("Bindo");
       if (!mounted) return;
       SnackBarUtils.successMessageBar(context, "Login Successful");
       Navigator.pushReplacement(
